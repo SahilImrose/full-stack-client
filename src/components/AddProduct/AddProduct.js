@@ -16,7 +16,7 @@ const AddProduct = () => {
             wight:data.wight,
             imageURL: imageUrl}
         
-        const url = `http://localhost:8080/addEvent`
+        const url = `https://peaceful-sierra-22355.herokuapp.com/addEvent`
         console.log(eventData)
         console.log(data)
         fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(eventData) })

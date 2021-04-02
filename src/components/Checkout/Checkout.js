@@ -13,7 +13,7 @@ const Checkout = () => {
     console.log(product)
     const [quantity, setQuantity] = useState(1)
     useEffect(() => {
-        fetch('http://localhost:8080/product/' + _id)
+        fetch('https://peaceful-sierra-22355.herokuapp.com/product/' + _id)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [_id])
@@ -21,7 +21,7 @@ const Checkout = () => {
         const orderDetail = {...product[0],...loggedInUser,
             quantity, date: new Date()
         }
-        fetch('http://localhost:8080/orderEvent', {
+        fetch('https://peaceful-sierra-22355.herokuapp.com/orderEvent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

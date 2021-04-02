@@ -4,7 +4,7 @@ import './Manage.css';
 
 const ManagePdTable = (props) => {
     const handleDelete = id => {
-        fetch(`http://localhost:8080/deleteProduct/${id}`,{
+        fetch(`https://peaceful-sierra-22355.herokuapp.com/deleteProduct/${id}`,{
             method:'DELETE',
         })
         .then(res =>res.json())

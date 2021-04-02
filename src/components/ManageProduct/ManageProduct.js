@@ -5,7 +5,7 @@ import ManagePdTable from './ManagePdTable/ManagePdTable';
 const ManageProduct = () => {
     const [events, setEvents] = useState([])
     useEffect(() => {
-        fetch('http://localhost:8080/product')
+        fetch('https://peaceful-sierra-22355.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setEvents(data))
     })
